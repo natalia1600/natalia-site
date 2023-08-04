@@ -20,7 +20,7 @@ const face_morphing_gifs = [
 
 const byow_vids = [
   {
-    src: "/byow_zoomed",
+    src: "/byow_zoomed.mp4",
     alt: "BYOW game clip - zoomed"
   },
   {

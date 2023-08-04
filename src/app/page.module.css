@@ -2,3 +2,8 @@
   display: flex;
   gap: 16px
 }
+
+.imageCol {
+  display: block;
+  gap: 16px
+}
