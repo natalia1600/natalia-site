@@ -1,95 +1,90 @@
-import Image from 'next/image'
 import styles from './page.module.css'
+import Link from 'next/link'
+import Gif from './gif'
+
+const face_morphing_gifs = [
+  {
+    src: "/morph1.gif",
+    alt: "John to Paul Morph"
+  },
+  {
+    src: "/morph1.gif",
+    alt: "John to Paul Morph"
+  },
+  {
+    src: "/morph1.gif",
+    alt: "John to Paul Morph"
+  },
+]
+
+
+const byow_vids = [
+  {
+    src: "/byow_zoomed",
+    alt: "BYOW game clip - zoomed"
+  },
+  {
+    src: "/byow_seeds.mp4",
+    alt: "BYOW game - seeds"
+  }
+]
+
+/**
+ * @todo Fix links (should be stacked)
+ * @todo Only one BYOW video is rendering
+ * @todo Make files for meta data
+ * @todo Fix border(?) (everything more centered)
+
+ */
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+    <body>
+      <header>
+        <h1> Natalia Ramirez </h1>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <a href="https://www.linkedin.com/in/natalia16/">LinkedIn </a>
         </div>
+        <div>
+          <a href="https://github.com/natalia1600">GitHub </a>
+        </div>
+      </header>
+      <p>
+        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
+        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
+        blurb blurb blurb blurb blurb
+      </p>
+      <h2>
+        Projects
+      </h2>
+      <h3>
+        Face Morphing
+      </h3>
+      <div className={styles.imageRow}>
+        {face_morphing_gifs.map(({ src, alt }) => <Gif src={src} width={200} height={200} alt={alt} />)}
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <p>
+        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
+        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
+        blurb blurb blurb blurb blurb
+      </p>
+      <h3>
+        2D Tile-Based Game: BYOW
+      </h3>
+      <div className={styles.imageRow}>
+        {byow_vids.map(({ src, alt }) => (
+          <video width={200} height={200} autoPlay loop key={src}>
+            <source src={src} type="video/mp4" />
+          </video>
+        ))}
       </div>
+      <p>
+        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
+        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
+        blurb blurb blurb blurb blurb
+      </p>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </body>
   )
 }
