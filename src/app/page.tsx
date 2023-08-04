@@ -4,15 +4,15 @@ import Gif from './gif'
 
 const face_morphing_gifs = [
   {
-    src: "/morph1.gif",
+    src: "/john_paul_morph.gif",
     alt: "John to Paul Morph"
   },
   {
-    src: "/morph1.gif",
+    src: "/john_paul_morph.gif",
     alt: "John to Paul Morph"
   },
   {
-    src: "/morph1.gif",
+    src: "/john_paul_morph.gif",
     alt: "John to Paul Morph"
   },
 ]
