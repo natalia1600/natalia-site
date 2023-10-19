@@ -62,7 +62,7 @@ export default function Home() {
         Face Morphing
       </h3>
       <div className={styles.imageRow}>
-        {face_morphing_gifs.map(({ src, alt }) => <Gif src={src} width={200} height={200} alt={alt} />)}
+        {face_morphing_gifs.map(({ src, alt }, i) => <Gif key={i} src={src} width={200} height={200} alt={alt} />)}
       </div>
       <p>
         blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
@@ -73,8 +73,8 @@ export default function Home() {
         2D Tile-Based Game: BYOW
       </h3>
       <div className={styles.imageRow}>
-        {byow_vids.map(({ src, alt }) => (
-          <video width={200} height={200} autoPlay loop key={src}>
+        {byow_vids.map(({ src, alt }, i) => (
+          <video width={200} height={200} autoPlay loop key={i}>
             <source src={src} type="video/mp4" />
           </video>
         ))}
