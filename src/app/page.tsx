@@ -20,13 +20,9 @@ const face_morphing_gifs = [
 
 const byow_vids = [
   {
-    src: "/byow_zoomed.mp4",
-    alt: "BYOW game clip - zoomed"
+    src: "/proj-bee-game.webm",
+    alt: "Bee game project"
   },
-  {
-    src: "/byow_seeds.mp4",
-    alt: "BYOW game - seeds"
-  }
 ]
 
 /**
@@ -74,8 +70,8 @@ export default function Home() {
       </h3>
       <div className={styles.imageRow}>
         {byow_vids.map(({ src, alt }, i) => (
-          <video width={200} height={200} autoPlay loop key={i}>
-            <source src={src} type="video/mp4" />
+          <video width={600} playsInline autoPlay muted loop key={i}>
+            <source src={src} type="video/webm" />
           </video>
         ))}
       </div>
