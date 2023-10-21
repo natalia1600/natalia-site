@@ -6,27 +6,17 @@
   padding: 0;
 }
 
-html,
 body {
   background-color: rgb(63, 82, 77);
-  max-width: 80vw;
-  overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-  width: 80%;
-  display: block;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 40px;
-
-}
-
-body {
+  margin: 40px;
   overflow-y: scroll;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 body {
@@ -54,24 +44,19 @@ h3 {
   font-size: 30px;
   font-weight: 600;
   margin-top: 30px;
-  margin-top: 30px;
-  text-align: center;
-
 
 }
 
 p {
   color: rgb(173, 173, 173);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
 }
 
 a {
+  text-decoration: none;
   color: rgb(173, 173, 173);
-  text-align: right;
 }
-
-
 
 /* visited link */
 a:visited {

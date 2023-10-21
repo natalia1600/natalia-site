@@ -4,15 +4,15 @@ import Gif from './gif'
 
 const face_morphing_gifs = [
   {
-    src: "/john_paul_morph.gif",
+    src: "/john_paul_morph_small.gif",
     alt: "John to Paul Morph"
   },
   {
-    src: "/john_paul_morph.gif",
+    src: "/john_paul_morph_small.gif",
     alt: "John to Paul Morph"
   },
   {
-    src: "/john_paul_morph.gif",
+    src: "/john_paul_morph_small.gif",
     alt: "John to Paul Morph"
   },
 ]
@@ -43,18 +43,16 @@ export default function Home() {
     <body>
       <header>
         <h1> Natalia Ramirez </h1>
-        <div>
+        <div className={styles.links}>
           <a href="https://www.linkedin.com/in/natalia16/">LinkedIn </a>
-        </div>
-        <div>
           <a href="https://github.com/natalia1600">GitHub </a>
         </div>
       </header>
+
       <p>
-        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
-        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
-        blurb blurb blurb blurb blurb
+        Software and data engineering | UC Berkeley Class of 2023
       </p>
+
       <h2>
         Projects
       </h2>
@@ -65,9 +63,11 @@ export default function Home() {
         {face_morphing_gifs.map(({ src, alt }, i) => <Gif key={i} src={src} width={200} height={200} alt={alt} />)}
       </div>
       <p>
-        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
-        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
-        blurb blurb blurb blurb blurb
+        Face morphing with OpenCV, including image shape warping
+        and cross-dissolving of colors. Defined corresponding points and applied
+        Delaunay triangulation for smooth transitions.
+
+
       </p>
       <h3>
         2D Tile-Based Game: BYOW
@@ -80,9 +80,8 @@ export default function Home() {
         ))}
       </div>
       <p>
-        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
-        blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb blurb
-        blurb blurb blurb blurb blurb
+        2D top view tile based game engine in Java.
+        Game featured pseudo-random world creation, saving and loading capabilities and dynamic tiles.
       </p>
 
     </body>
