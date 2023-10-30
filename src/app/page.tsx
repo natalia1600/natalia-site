@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </header>
       <h4>
-        📍 SF Bay Area  | Software and Data Engineering  | UC Berkeley '23
+        📍 SF Bay Area  | Software and Data Engineering  | UC Berkeley 2023
       </h4>
       <h2>
         Projects
