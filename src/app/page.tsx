@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </header>
       <h4>
-        SF Bay Area  |  Software and Data Engineering  |  UC Berkeley - Class of 2023
+        📍 SF Bay Area  | Software and Data Engineering  | UC Berkeley '23
       </h4>
       <h2>
         Projects
@@ -54,7 +54,7 @@ export default function Home() {
       </h3>
       <div className={styles.imageRow}>
         {waveform_vid.map(({ src, alt }, i) => (
-          <video autoPlay width="600" height="400" controls key={i}>
+          <video width="500" height="300" autoPlay controls key={i}>
             <source src={src} type="video/mp4" />
           </video>
         ))}
@@ -79,9 +79,9 @@ export default function Home() {
         Face Morphing
       </h3>
       <div className={styles.imageRow}>
-        {face_morphing_gifs.map(({ src, alt }, i) => <Gif key={i} src={src} width={400} height={400} alt={alt} />)}
+        {face_morphing_gifs.map(({ src, alt }, i) => <Gif key={i} src={src} width={300} height={300} alt={alt} />)}
         <div>
-          Face morphing with OpenCV, including image shape warping
+          Face morphing with Python and OpenCV, including image shape warping
           and cross-dissolving of colors. Defined corresponding points and applied
           Delaunay triangulation for smooth transitions.
           <br></br>
@@ -98,13 +98,12 @@ export default function Home() {
       <br></br>
       <br></br>
       <br></br>
-
       <h3>
         2D Tile-Based Game: BYOW
       </h3>
       <div className={styles.imageRow}>
         {byow_vids.map(({ src, alt }, i) => (
-          <video width={600} playsInline autoPlay muted loop key={i}>
+          <video width={500} playsInline autoPlay muted loop key={i}>
             <source src={src} type="video/webm" />
           </video>
         ))}
@@ -113,7 +112,6 @@ export default function Home() {
           Game featured pseudo-random world creation, saving and loading capabilities and dynamic tiles.
           <br></br>
           <br></br>
-
         </div>
       </div>
     </div>
