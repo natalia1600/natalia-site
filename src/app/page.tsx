@@ -6,15 +6,7 @@ const face_morphing_gifs = [
   {
     src: "/john_paul_morph_small.gif",
     alt: "John to Paul Morph"
-  },
-  {
-    src: "/john_paul_morph_small.gif",
-    alt: "John to Paul Morph"
-  },
-  {
-    src: "/john_paul_morph_small.gif",
-    alt: "John to Paul Morph"
-  },
+  }
 ]
 
 
@@ -22,6 +14,13 @@ const byow_vids = [
   {
     src: "/proj-bee-game.webm",
     alt: "Bee game project"
+  },
+]
+
+const waveform_vid = [
+  {
+    src: "/waveform_viz_bjork.mp4",
+    alt: "Waveform Visualizer"
   },
 ]
 
@@ -36,7 +35,7 @@ const byow_vids = [
 
 export default function Home() {
   return (
-    <body>
+    <div>
       <header>
         <h1> Natalia Ramirez </h1>
         <div className={styles.links}>
@@ -44,27 +43,62 @@ export default function Home() {
           <a href="https://github.com/natalia1600">GitHub </a>
         </div>
       </header>
-
-      <p>
-        Software and data engineering | UC Berkeley Class of 2023
-      </p>
-
+      <h4>
+        SF Bay Area  |  Software and Data Engineering  |  UC Berkeley - Class of 2023
+      </h4>
       <h2>
         Projects
       </h2>
       <h3>
+        Waveform Visualizer
+      </h3>
+      <div className={styles.imageRow}>
+        {waveform_vid.map(({ src, alt }, i) => (
+          <video autoPlay width="600" height="400" controls key={i}>
+            <source src={src} type="video/mp4" />
+          </video>
+        ))}
+
+        <div>
+          A real-time audio visualizer and player that uses PyAudio for audio input and FFT to transform the audio into a visual spectrogram displayed with pygame. It supports live audio input as well as playback from a .wav file while the visualizer is running.
+          <br></br>
+          <br></br>
+          <div className={styles.links}>
+            <button>
+              <a href="https://github.com/natalia1600/audio-viz">
+                GITHUB REPO
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h3>
         Face Morphing
       </h3>
       <div className={styles.imageRow}>
-        {face_morphing_gifs.map(({ src, alt }, i) => <Gif key={i} src={src} width={200} height={200} alt={alt} />)}
+        {face_morphing_gifs.map(({ src, alt }, i) => <Gif key={i} src={src} width={400} height={400} alt={alt} />)}
+        <div>
+          Face morphing with OpenCV, including image shape warping
+          and cross-dissolving of colors. Defined corresponding points and applied
+          Delaunay triangulation for smooth transitions.
+          <br></br>
+          <br></br>
+          <div className={styles.links}>
+            <button>
+              <a href="https://github.com/natalia1600/face-morph">
+                GITHUB REPO
+              </a>
+            </button>
+          </div>
+        </div>
       </div>
-      <p>
-        Face morphing with OpenCV, including image shape warping
-        and cross-dissolving of colors. Defined corresponding points and applied
-        Delaunay triangulation for smooth transitions.
+      <br></br>
+      <br></br>
+      <br></br>
 
-
-      </p>
       <h3>
         2D Tile-Based Game: BYOW
       </h3>
@@ -74,12 +108,14 @@ export default function Home() {
             <source src={src} type="video/webm" />
           </video>
         ))}
-      </div>
-      <p>
-        2D top view tile based game engine in Java.
-        Game featured pseudo-random world creation, saving and loading capabilities and dynamic tiles.
-      </p>
+        <div>
+          2D top view tile based game engine in Java.
+          Game featured pseudo-random world creation, saving and loading capabilities and dynamic tiles.
+          <br></br>
+          <br></br>
 
-    </body>
+        </div>
+      </div>
+    </div>
   )
 }
