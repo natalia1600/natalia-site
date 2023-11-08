@@ -60,7 +60,7 @@ export default function Home() {
 
       <div className={styles.pageContent}>
         <Project
-          preview={<video className={styles.imageLeft} controls >
+          preview={<video className={styles.imageLeft} controls autoPlay playsInline muted loop >
             <source src="/waveform_viz_bjork.mp4" type="video/mp4" />
           </video>} projectName={"LIVE AUDIO WAVEFORM VISUALIZER"}
           projectText={"A real-time audio visualizer and player that uses PyAudio for audio input and FFT to transform the audio into a visual spectrogram displayed with pygame. It supports live audio input as well as playback from a .wav file while the visualizer is running."}
