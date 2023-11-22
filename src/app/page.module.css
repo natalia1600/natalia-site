@@ -6,7 +6,7 @@
 }
 
 .projectContainer {
-  max-width: 1000px;
+  max-width: 1100px;
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -35,26 +35,33 @@
 }
 
 .textContainer>* {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
+
+
 
 .imageLeft {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 50%;
+  width: 40%;
 
   @media (max-width: 800px) {
     display: block;
     width: 100%
   }
+
 }
+
+
 
 .heading {
   color: rgb(255, 255, 255);
   font-size: 3em;
   font-weight: 10;
-  padding-top: 3.3em;
+  padding-top: 3em;
+  padding-left: 3em;
+
   display: flex;
   flex-direction: row;
 
@@ -87,7 +94,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  height: 500px;
 }
 
 .heroContent {
@@ -100,7 +107,6 @@
 .headingText {
   font-size: 20px;
   align-items: left;
-  padding-top: 10px;
   text-align: left;
 }
 
@@ -109,6 +115,7 @@
   color: rgb(255, 255, 255);
   font-size: 2.6em;
   font-weight: 600;
+  padding-top: 15x;
   line-height: normal;
 }
 

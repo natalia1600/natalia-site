@@ -1,5 +1,4 @@
 import styles from './page.module.css'
-import Link from 'next/link'
 
 /**
  * @todo Fix links (should be stacked)
@@ -46,15 +45,13 @@ export default function Home() {
         SF Bay Area |  UC Berkeley 2023
       </div>
 
-
-
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.heroHeading}>
             DATA / SOFTWARE ENGINEERING
           </div>
 
-          Hello! I&apos;m a recent UC Berkeley alumn based in the Bay Area. I&apos;ve interned at Apple as a Data Scientist, and at Bank of America as a Risk Quant. Currently, I&apos;m a Cyber Defense Data Engineer for the City & County of San Francisco. Check out some of my projects below, and find my contact info in the links above.
+          Hello! I&apos;m a recent UC Berkeley alum based in the Bay Area. I&apos;ve interned at Apple as a Data Scientist, and at Bank of America as a Risk Quant. Currently, I&apos;m a Cyber Defense Data Engineer for the City & County of San Francisco. Check out some of my projects below, and find my contact info in the links above.
         </div>
       </div>
 
@@ -62,22 +59,22 @@ export default function Home() {
         <Project
           preview={<video className={styles.imageLeft} controls autoPlay playsInline muted loop >
             <source src="/waveform_viz_bjork.mp4" type="video/mp4" />
-          </video>} projectName={"LIVE AUDIO WAVEFORM VISUALIZER"}
-          projectText={"A real-time audio visualizer and player that uses PyAudio for audio input and FFT to transform the audio into a visual spectrogram displayed with pygame. It supports live audio input as well as playback from a .wav file while the visualizer is running."}
+          </video>} projectName={"LIVE AUDIO WAVEFORM VISUALIZER (PYTHON)"}
+          projectText={"A dynamic visualization tool for audio data, capable of processing both system audio and WAV files. \n It utilizes PyAudio for handling audio input and Pygame for rendering the visualizations in real-time. The program breaks down audio data into chunks and uses Fourier transform (FFT) to extract frequency and amplitude data. The visualization is updated with each new audio chunk, resulting in a live, animated display of the audio waveform​."}
           githubLink={"https://github.com/natalia1600/audio-viz"}
         />
         <Project
-          preview={<img src={"/john_paul_morph_small.gif"} className={styles.imageLeft} />}
-          projectName={"FACE MORPHING"}
-          projectText={"Face morphing with Python and OpenCV, including image shape warping and cross-dissolving of colors. Defined corresponding points and applied Delaunay triangulation for smooth transitions."}
+          preview={<img src={"/john_paul_morph.gif"} className={styles.imageLeft} />}
+          projectName={"FACE MORPHING (PYTHON)"}
+          projectText={"Face morphing between images using delauny triangulation, including image shape warping and cross-dissolving of colors. \n The program warps images by mapping key facial features identified through a point selector tool. This feature prompts users to click on specified facial markers the first time an image is processed, facilitating accurate overlay and transformation between faces. Delaunay Triangulation is utilized to divide the face into multiple triangular sections, ensuring a smooth morphing process between the images."}
           githubLink={"https://github.com/natalia1600/face-morph"}
         />
         <Project
           preview={<video className={styles.imageLeft} autoPlay playsInline muted loop>
             <source src="/proj-bee-game.webm" type="video/webm" />
           </video>}
-          projectName={"TILE BASED GAME / RANDOM WORLDS"}
-          projectText={"2D top view tile based game engine in Java. Game featured pseudo-random world creation, saving and loading capabilities and dynamic tiles."}
+          projectName={"BEE GAME (JAVA)"}
+          projectText={"A 2D tile-based game engine focused on world exploration. It features a map generator that creates pseudo-random worlds, complete with dynamic tiles, rooms, and hallways. The core objective of the game is to navigate through these worlds, reach a tomato, and avoid bees. The game includes a saving and loading function that recalls previous actions in a fast-forward playback when reloading. "}
           githubLink={"https://github.com/natalia1600/randomworldgen"}
         />
       </div >

@@ -28,16 +28,17 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 19;
   font-family: 'Montserrat', sans-serif;
   color: rgb(255, 255, 255);
   font-weight: 100;
+
 }
 
 body {
   background-color: rgb(22, 23, 27);
-  margin: 0;
-  padding: 1rem 2rem;
+  margin: 1;
+  padding: 1.5rem 2rem;
 
 }
 
@@ -94,6 +95,8 @@ a:visited {
 
 a:hover {
   color: rgb(83, 199, 152);
+  transition: .4s;
+
 }
 
 a:active {
@@ -117,5 +120,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background: rgb(68, 165, 126);
+  background: rgb(55, 125, 97);
+  transition: .4s;
+
 }
