@@ -28,7 +28,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 19;
   font-family: 'Montserrat', sans-serif;
   color: rgb(255, 255, 255);
   font-weight: 100;
@@ -36,9 +35,10 @@
 }
 
 body {
-  background-color: rgb(22, 23, 27);
-  margin: 1;
-  padding: 1.5rem 2rem;
+  background: rgb(20, 20, 23);
+  background: radial-gradient(circle, rgba(20, 20, 23, 1) 0%, rgba(22, 17, 28, 1) 53%, rgba(15, 31, 29, 1) 100%);
+  padding: 1em;
+  padding-bottom: 10em;
 
 }
 
@@ -47,14 +47,18 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
+  padding: 2em;
 }
 
 h1 {
   color: rgb(255, 255, 255);
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 400;
   align-items: center;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 }
 
 h3 {
@@ -83,6 +87,9 @@ p {
 }
 
 a {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
   text-decoration: none;
   color: (30, 31, 49);
 }
@@ -107,7 +114,7 @@ button {
   border: none;
   background: rgb(83, 199, 152);
   color: rgb(0, 0, 0);
-  font-weight: 400;
+  font-weight: 600;
   padding: 0 2em;
   height: 3em;
   font-size: 1em;

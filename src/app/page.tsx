@@ -33,22 +33,41 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1>Natalia Ramirez</h1>
+
+        <h1>
+          <div className={styles.headerItem}>
+            <div className={styles.locationLogo}>
+              <img src={'./location-logo.svg'} alt="Location Logo" className={styles.locationLogo} />
+            </div>
+            <div className={styles.headerText}>
+              SF Bay Area |  UC Berkeley 2023
+            </div>
+          </div>
+        </h1>
         <div className={styles.links}>
-          <a href="https://www.linkedin.com/in/natalia16/">LINKEDIN </a>
-          <a href="https://github.com/natalia1600">GITHUB </a>
-          <a href="./Natalia_Ramirez_Resume.pdf">RESUME</a>
+          <div className={styles.headingLink}>
+            <a href="https://www.linkedin.com/in/natalia16/">
+              <img src={'./linkedin-logo.svg'} alt="LinkedIn Logo" className={styles.logo} />
+            </a>
+          </div>
+          <div className={styles.headingLink}>
+            <a href="https://github.com/natalia1600">
+              <img src={'./github-logo.svg'} alt="GitHub Logo" className={styles.logo} />
+            </a>
+          </div>
+          <div className={styles.headingLink}>
+            <a href="./Natalia_Ramirez_Resume.pdf">
+              <button className={styles.resumeButton}>RESUME
+              </button>
+            </a>
+          </div>
         </div>
-      </header>
 
-      <div className={styles.headingText}>
-        SF Bay Area |  UC Berkeley 2023
-      </div>
-
+      </header >
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.heroHeading}>
-            DATA / SOFTWARE ENGINEERING
+            NATALIA RAMIREZ
           </div>
 
           Hello! I&apos;m a recent UC Berkeley alum based in the Bay Area. I&apos;ve interned at Apple as a Data Scientist, and at Bank of America as a Risk Quant. Currently, I&apos;m a Cyber Defense Data Engineer for the City & County of San Francisco. Check out some of my projects below, and find my contact info in the links above.
@@ -57,16 +76,15 @@ export default function Home() {
 
       <div className={styles.pageContent}>
         <Project
-          preview={<video className={styles.imageLeft} controls autoPlay playsInline muted loop >
-            <source src="/waveform_viz_bjork.mp4" type="video/mp4" />
-          </video>} projectName={"LIVE AUDIO WAVEFORM VISUALIZER (PYTHON)"}
-          projectText={"A dynamic visualization tool for audio data, capable of processing both system audio and WAV files. \n It utilizes PyAudio for handling audio input and Pygame for rendering the visualizations in real-time. The program breaks down audio data into chunks and uses Fourier transform (FFT) to extract frequency and amplitude data. The visualization is updated with each new audio chunk, resulting in a live, animated display of the audio waveform​."}
+          preview={<video className={styles.imageLeft} controls autoPlay playsInline muted loop > <source src="/weval_time_goes.mp4" type="video/mp4" /> </video>}
+          projectName={"LIVE AUDIO WAVEFORM VISUALIZER (PYTHON)"}
+          projectText={"A dynamic visualization tool for audio data, capable of processing both system audio and WAV files. \n\n It utilizes PyAudio for handling audio input and Pygame for rendering the visualizations in real-time. The program breaks down audio data into chunks and uses Fourier transform (FFT) to extract frequency and amplitude data. The visualization is updated with each new audio chunk, resulting in a live, animated display of the audio waveform​."}
           githubLink={"https://github.com/natalia1600/audio-viz"}
         />
         <Project
-          preview={<img src={"/john_paul_morph.gif"} className={styles.imageLeft} />}
+          preview={<img src={"/john_paul_morph.gif"} className={styles.projectGif} />}
           projectName={"FACE MORPHING (PYTHON)"}
-          projectText={"Face morphing between images using delauny triangulation, including image shape warping and cross-dissolving of colors. \n The program warps images by mapping key facial features identified through a point selector tool. This feature prompts users to click on specified facial markers the first time an image is processed, facilitating accurate overlay and transformation between faces. Delaunay Triangulation is utilized to divide the face into multiple triangular sections, ensuring a smooth morphing process between the images."}
+          projectText={"Face morphing between images using delauny triangulation, including image shape warping and cross-dissolving of colors. The point selector tool prompts users to click on specified facial markers for each image, ensuring accurate overlay between faces."}
           githubLink={"https://github.com/natalia1600/face-morph"}
         />
         <Project
